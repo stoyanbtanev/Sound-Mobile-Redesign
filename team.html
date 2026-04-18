@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="bg">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sound Mobile | Meet the Production Specialists</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://api.fontshare.com">
+    <link href="https://api.fontshare.com/v2/css?f[]=zodiak@400,700&f[]=satoshi@400,500,700&display=swap" rel="stylesheet">
+    <style>
+        .team-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+            gap: 4rem;
+            padding: 8vw;
+        }
+        .member-card {
+            border-left: 1px solid var(--border);
+            padding-left: 2.5rem;
+            transition: var(--transition);
+        }
+        .member-card:hover { border-color: var(--accent); }
+        .member-role { color: var(--accent); font-weight: 700; text-transform: uppercase; font-size: 0.8rem; margin-bottom: 1rem; display: block; letter-spacing: 0.1em; }
+        .member-info h2 { font-size: 2.5rem; margin-bottom: 0.5rem; }
+        .member-info p { color: var(--text-muted); font-size: 1rem; line-height: 1.7; max-width: 500px; }
+
+        @media (max-width: 900px) {
+            .team-grid { grid-template-columns: 1fr; gap: 3rem; }
+            .member-info h2 { font-size: 2rem; }
+        }
+    </style>
+</head>
+<body class="page-team">
+
+    <div class="app-container">
+        <!-- Persistent Sidebar -->
+        <aside class="sidebar">
+            <div class="sidebar-logo">
+                <a href="index.html"><img src="assets/brand/logo_white.png" alt="Sound Mobile"></a>
+            </div>
+            <nav class="sidebar-nav">
+                <a href="index.html" class="nav-item" data-bg="ОЗВУЧАВАНЕ" data-en="SOUND">ОЗВУЧАВАНЕ</a>
+                <a href="lighting.html" class="nav-item" data-bg="ОСВЕТЛЕНИЕ" data-en="LIGHTING">ОСВЕТЛЕНИЕ</a>
+                <a href="stage.html" class="nav-item" data-bg="СЦЕНА" data-en="STAGE">STAGE</a>
+                <a href="inventory.html" class="nav-item" data-bg="НАЛИЧНОСТИ" data-en="INVENTORY">INVENTORY</a>
+                <a href="rent.html" class="nav-item" data-bg="БЕКЛАЙН" data-en="BACKLINE RENT">BACKLINE RENT</a>
+                <a href="gallery.html" class="nav-item" data-bg="ГАЛЕРИЯ" data-en="GALLERY">GALLERY</a>
+                <a href="about.html" class="nav-item" data-bg="ЗА НАС" data-en="ABOUT US">ABOUT US</a>
+                <a href="team.html" class="nav-item" data-bg="ЕКИП" data-en="TEAM">TEAM</a>
+                <a href="contacts.html" class="nav-item" data-bg="КОНТАКТИ" data-en="CONTACTS">CONTACTS</a>
+                <a href="fun.html" class="nav-item" data-bg="FUN" data-en="FUN">FUN</a>
+            </nav>
+            <div class="sidebar-footer">
+                <div class="lang-switcher">
+                    <button class="lang-btn active">BG</button>
+                    <span>/</span>
+                    <button class="lang-btn">EN</button>
+                </div>
+                <div class="sidebar-contact">
+                    <span data-bg="Запитвания:" data-en="Inquiries:">Запитвания:</span>
+                    <a href="mailto:info.soundmobile@gmail.com">info.soundmobile@gmail.com</a>
+                </div>
+            </div>
+        </aside>
+
+        <!-- Content Area -->
+        <main class="main-view">
+            <!-- Hero -->
+            <section class="hero-section">
+                <img src="assets/hero/sm-55.jpg" alt="Our Team" class="hero-bg">
+                <div class="hero-overlay"></div>
+                <div class="hero-content">
+                    <span class="eyebrow reveal" data-bg="СЕКЦИЯ 08" data-en="SECTION 08">СЕКЦИЯ 08</span>
+                    <h1 class="reveal" data-bg="Екипът." data-en="The Team.">Екипът.</h1>
+                    <p class="reveal" data-bg="Професионалисти с дългогодишен опит на сцената, обединени от една цел - перфектното протичане на вашето събитие." 
+                       data-en="Professionals with years of stage experience, united by one goal - the perfect execution of your event.">
+                        Професионалисти с дългогодишен опит на сцената, обединени от една цел - перфектното протичане на вашето събитие.
+                    </p>
+                </div>
+            </section>
+
+            <!-- Team Grid -->
+            <div class="team-grid">
+                <!-- Member 1 -->
+                <div class="member-card reveal">
+                    <div class="member-info">
+                        <span class="member-role" data-bg="САУНДИНЖЕНЕР & КООРДИНАТОР" data-en="SOUND ENGINEER & COORDINATOR">САУНДИНЖЕНЕР & КООРДИНАТОР</span>
+                        <h2 data-bg="Любен Грозев" data-en="Lyuben Grozev">Любен Грозев</h2>
+                        <p data-bg="Основател на Саунд Мобил. Превърнал мазето в Коматево в първата репетиционна зала в Пловдив."
+                           data-en="Founder of Sound Mobile. Transformed a basement in Komatevo into the first rehearsal studio in Plovdiv.">
+                            Основател на Саунд Мобил. Превърнал мазето в Коматево в първата репетиционна зала в Пловдив.
+                        </p>
+                    </div>
+                </div>
+                <!-- Member 2 -->
+                <div class="member-card reveal">
+                    <div class="member-info">
+                        <span class="member-role" data-bg="ОСВЕТЛЕНИЕ & ИНФРАСТРУКТУРА" data-en="LIGHTING & INFRASTRUCTURE">ОСВЕТЛЕНИЕ & ИНФРАСТРУКТУРА</span>
+                        <h2 data-bg="Георги Стефанов" data-en="Georgi Stefanov">Георги Стефанов</h2>
+                        <p data-bg="Над 20 години опит в сценичното осветление. Участвал в оперни турнета из цяла Европа."
+                           data-en="Over 20 years of experience in stage lighting. Participated in opera tours across Europe.">
+                            Над 20 години опит в сценичното осветление. Участвал в оперни турнета из цяла Европа.
+                        </p>
+                    </div>
+                </div>
+                <!-- Member 3 -->
+                <div class="member-card reveal">
+                    <div class="member-info">
+                        <span class="member-role" data-bg="САУНДИНЖЕНЕР & ЗАПИС" data-en="SOUND ENGINEER & RECORDING">САУНДИНЖЕНЕР & ЗАПИС</span>
+                        <h2 data-bg="Тодор Чорбов" data-en="Todor Chorbov">Тодор Чорбов</h2>
+                        <p data-bg="Ветеран на 'Тото Студио'. Експерт в Pro Tools и лайф записите."
+                           data-en="Veteran of 'Toto Studio'. Expert in Pro Tools and live recordings.">
+                            Ветеран на 'Тото Студио'. Експерт в Pro Tools и лайф записите.
+                        </p>
+                    </div>
+                </div>
+                <!-- Member 4 -->
+                <div class="member-card reveal">
+                    <div class="member-info">
+                        <span class="member-role" data-bg="ЛАЙТ ДИЗАЙН & ВИДЕО" data-en="LIGHT DESIGN & VIDEO">ЛАЙТ ДИЗАЙН & ВИДЕО</span>
+                        <h2 data-bg="Иван Бодуров" data-en="Ivan Bodurov">Иван Бодуров</h2>
+                        <p data-bg="Иновативен подход към лайт дизайна и визуалните ефекти."
+                           data-en="Innovative approach to light design and visual effects.">
+                            Иновативен подход към лайт дизайна и визуалните ефекти.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script src="main.js"></script>
+</body>
+</html>

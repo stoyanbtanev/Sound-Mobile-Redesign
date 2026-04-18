@@ -1,0 +1,17 @@
+# Masterpiece Site Gitignore
+.DS_Store
+Thumbs.db
+
+# Agent Artifacts
+.gemini/
+antigravity/
+implementation_plan.md
+task.md
+walkthrough.md
+*.webp
+*.png
+# (Exclude specific large raw assets if any, but keep /assets/ as they are production media)
+
+# IDE 
+.vscode/
+.idea/

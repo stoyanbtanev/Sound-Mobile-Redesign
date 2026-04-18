@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="bg">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sound Mobile | Equipment Inventory & Catalogs</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://api.fontshare.com">
+    <link href="https://api.fontshare.com/v2/css?f[]=zodiak@400,700&f[]=satoshi@400,500,700&display=swap" rel="stylesheet">
+</head>
+<body class="page-inventory">
+
+    <div class="app-container">
+        <!-- Persistent Sidebar -->
+        <aside class="sidebar">
+            <div class="sidebar-logo">
+                <a href="index.html"><img src="assets/brand/logo_white.png" alt="Sound Mobile"></a>
+            </div>
+            <nav class="sidebar-nav">
+                <a href="index.html" class="nav-item" data-bg="ОЗВУЧАВАНЕ" data-en="SOUND">ОЗВУЧАВАНЕ</a>
+                <a href="lighting.html" class="nav-item" data-bg="ОСВЕТЛЕНИЕ" data-en="LIGHTING">ОСВЕТЛЕНИЕ</a>
+                <a href="stage.html" class="nav-item" data-bg="СЦЕНА" data-en="STAGE">STAGE</a>
+                <a href="inventory.html" class="nav-item" data-bg="НАЛИЧНОСТИ" data-en="INVENTORY">INVENTORY</a>
+                <a href="rent.html" class="nav-item" data-bg="БЕКЛАЙН" data-en="BACKLINE RENT">BACKLINE RENT</a>
+                <a href="gallery.html" class="nav-item" data-bg="ГАЛЕРИЯ" data-en="GALLERY">GALLERY</a>
+                <a href="about.html" class="nav-item" data-bg="ЗА НАС" data-en="ABOUT US">ABOUT US</a>
+                <a href="team.html" class="nav-item" data-bg="ЕКИП" data-en="TEAM">TEAM</a>
+                <a href="contacts.html" class="nav-item" data-bg="КОНТАКТИ" data-en="CONTACTS">CONTACTS</a>
+                <a href="fun.html" class="nav-item" data-bg="FUN" data-en="FUN">FUN</a>
+            </nav>
+            <div class="sidebar-footer">
+                <div class="lang-switcher">
+                    <button class="lang-btn active">BG</button>
+                    <span>/</span>
+                    <button class="lang-btn">EN</button>
+                </div>
+                <div class="sidebar-contact">
+                    <span data-bg="Запитвания:" data-en="Inquiries:">Запитвания:</span>
+                    <a href="mailto:info.soundmobile@gmail.com">info.soundmobile@gmail.com</a>
+                </div>
+            </div>
+        </aside>
+
+        <!-- Content Area -->
+        <main class="main-view">
+            <!-- Hero -->
+            <section class="hero-section">
+                <img src="assets/hero/sm-64.jpg" alt="Equipment Inventory" class="hero-bg">
+                <div class="hero-overlay"></div>
+                <div class="hero-content">
+                    <span class="eyebrow reveal" data-bg="СЕКЦИЯ 04" data-en="SECTION 04">СЕКЦИЯ 04</span>
+                    <h1 class="reveal" data-bg="Наличности." data-en="Inventory.">Наличности.</h1>
+                    <p class="reveal" data-bg="Пълен списък с наличното оборудване и актуалния ценоразпис за наем. Изтеглете официалните ни каталози." 
+                       data-en="Full list of available equipment and current rental pricing. Download our official catalogs.">
+                        Пълен списък с наличното оборудване и актуалния ценоразпис за наем. Изтеглете официалните ни каталози.
+                    </p>
+                </div>
+            </section>
+
+            <!-- Content Blocks -->
+            <section class="page-section">
+                <div class="section-grid">
+                    <div class="info-card reveal">
+                        <h3 data-bg="Документация & Каталози" data-en="Docs & Catalogs">Документация & Каталози</h3>
+                        <p data-bg="За ваше удобство сме подготвили детайлни PDF файлове с инвентар и цени."
+                           data-en="For your convenience, we have prepared detailed PDF files with inventory and prices.">
+                           За ваше удобство сме подготвили детайлни PDF файлове с инвентар и цени.
+                        </p>
+                        <div style="display: flex; flex-direction: column; gap: 1rem; margin-top: 2rem;">
+                            <a href="assets/docs/pricing_catalog.pdf" class="btn btn-outline" target="_blank" data-bg="↓ ЦЕНОРАЗПИС (PDF)" data-en="↓ PRICING CATALOG (PDF)">↓ ЦЕНОРАЗПИС (PDF)</a>
+                            <a href="assets/docs/inventory.pdf" class="btn btn-outline" target="_blank" data-bg="↓ ОБЩ ИНВЕНТАР (PDF)" data-en="↓ FULL INVENTORY (PDF)">↓ ОБЩ ИНВЕНТАР (PDF)</a>
+                            <a href="assets/docs/backline.pdf" class="btn btn-outline" target="_blank" data-bg="↓ БЕКЛАЙН СПИСЪК (PDF)" data-en="↓ BACKLINE LIST (PDF)">↓ БЕКЛАЙН СПИСЪК (PDF)</a>
+                        </div>
+                    </div>
+                    <div class="reveal">
+                        <img src="assets/gallery/sm-31.jpg" alt="Inventory Management" style="border-radius: 12px; box-shadow: 0 30px 60px rgba(0,0,0,0.5);">
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <script src="main.js"></script>
+</body>
+</html>
