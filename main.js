@@ -31,11 +31,34 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // 2. Active Link Highlighting
     const currentPath = window.location.pathname.split('/').pop() || 'index.html';
-    document.querySelectorAll('.nav-item').forEach(link => {
+    document.querySelectorAll('.nav-item, .overlay-nav a').forEach(link => {
         if (link.getAttribute('href') === currentPath) {
             link.classList.add('active');
         }
     });
+
+    // 3. Mobile Menu Toggle
+    const menuTrigger = document.querySelector('.menu-trigger');
+    const navOverlay = document.querySelector('.nav-overlay');
+    const overlayLinks = document.querySelectorAll('.overlay-nav a');
+
+    if (menuTrigger && navOverlay) {
+        menuTrigger.addEventListener('click', () => {
+            const isActive = menuTrigger.classList.toggle('active');
+            navOverlay.classList.toggle('active');
+            if (window.innerWidth <= 1024) {
+                document.body.style.overflow = isActive ? 'hidden' : '';
+            }
+        });
+
+        overlayLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                menuTrigger.classList.remove('active');
+                navOverlay.classList.remove('active');
+                document.body.style.overflow = '';
+            });
+        });
+    }
 
     // 4. Reveal Animations (Intersection Observer)
     const revealCallback = (entries, observer) => {

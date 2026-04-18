@@ -15,3 +15,5 @@ walkthrough.md
 # IDE 
 .vscode/
 .idea/
+
+.vercel
