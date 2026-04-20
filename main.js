@@ -26,8 +26,15 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
-    // Initialize Language
-    updateLanguage(currentLang);
+    // Initialize Language — skip DOM update when 'bg' since HTML already defaults to it
+    if (currentLang !== 'bg') {
+        updateLanguage(currentLang);
+    } else {
+        // Just sync the active button state without touching any text nodes
+        langBtns.forEach(btn => {
+            btn.classList.toggle('active', btn.innerText.toLowerCase() === 'bg');
+        });
+    }
 
     // 2. Active Link Highlighting
     const currentPath = window.location.pathname.split('/').pop() || 'index.html';

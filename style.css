@@ -162,7 +162,8 @@ p { font-size: clamp(1rem, 1.2vw, 1.15rem); color: var(--text-muted); }
   transition: var(--transition);
 }
 
-.nav-item:hover, .nav-item.active { color: var(--text); padding-left: 0.5rem; }
+.nav-item:hover { color: var(--text); padding-left: 0.5rem; }
+.nav-item.active { color: var(--text); }
 .nav-item.active::before { height: 20px; }
 
 .sidebar-footer { 
@@ -336,6 +337,9 @@ p { font-size: clamp(1rem, 1.2vw, 1.15rem); color: var(--text-muted); }
   0% { transform: translateX(0); }
   100% { transform: translateX(-50%); }
 }
+
+/* Hide section number labels */
+.eyebrow { display: none; }
 
 /* Reveal Animations */
 .reveal { opacity: 0; transform: translateY(30px); transition: 1000ms var(--ease); }
