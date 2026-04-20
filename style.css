@@ -475,11 +475,12 @@ p { font-size: clamp(1rem, 1.2vw, 1.15rem); color: var(--text-muted); }
   width: 62px;
   height: 62px;
   min-width: 62px;
-  object-fit: cover;
+  object-fit: contain;
   border-radius: 8px;
   border: 1px solid var(--border);
   flex-shrink: 0;
   background: var(--surface-2);
+  padding: 8px;
 }
 
 .footer-brand-text strong {
