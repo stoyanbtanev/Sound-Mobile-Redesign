@@ -302,6 +302,9 @@ p { font-size: clamp(1rem, 1.2vw, 1.15rem); color: var(--text-muted); }
 .btn-primary { background: var(--accent); color: #fff; }
 .btn-primary:hover { background: var(--accent-hover); transform: translateX(5px); }
 
+.btn-outline { border: 2px solid var(--accent); color: var(--accent); background: transparent; }
+.btn-outline:hover { background: var(--accent); color: #fff; transform: translateX(5px); }
+
 /* Brands Ticker */
 .brand-strip {
   background: var(--surface);
@@ -342,4 +345,75 @@ p { font-size: clamp(1rem, 1.2vw, 1.15rem); color: var(--text-muted); }
 .page-sound { --accent: #ffae00; }
 .page-lighting { --accent: #00ccff; }
 .page-stage { --accent: #ff3366; }
+.page-inventory { --accent: #3ddc97; }
+.page-rent { --accent: #f4c545; }
+.page-about { --accent: #b388ff; }
+.page-team { --accent: #82b1ff; }
+.page-contacts { --accent: #ff7043; }
+.page-fun { --accent: #e040fb; }
 .page-gallery { --bg: #0c0b0a; --text: #efe9e1; --border: rgba(255,255,255,0.06); }
+
+/* Stats Strip */
+.stats-strip {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 1px;
+  background: var(--border);
+  border-top: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+  position: relative;
+  z-index: 10;
+}
+.stat-item {
+  background: var(--bg);
+  padding: 3rem 2rem;
+  text-align: center;
+}
+.stat-item .stat-num {
+  font-family: var(--font-display);
+  font-size: clamp(2.5rem, 5vw, 4rem);
+  font-weight: 700;
+  color: var(--accent);
+  display: block;
+  line-height: 1;
+  margin-bottom: 0.5rem;
+}
+.stat-item .stat-label {
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  color: var(--text-muted);
+  font-weight: 700;
+}
+
+/* Service Card Grid */
+.service-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1.5rem;
+  margin-top: 3rem;
+}
+
+/* Full-width feature section */
+.feature-section {
+  position: relative;
+  min-height: 60vh;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  padding: clamp(60px, 10vw, 120px) clamp(5%, 8vw, 8vw);
+}
+.feature-bg {
+  position: absolute;
+  top: 0; left: 0; width: 100%; height: 100%;
+  object-fit: cover;
+  z-index: -2;
+  opacity: 0.35;
+}
+.feature-overlay {
+  position: absolute;
+  top: 0; left: 0; width: 100%; height: 100%;
+  background: linear-gradient(135deg, var(--bg) 30%, rgba(12,11,10,0.6) 100%);
+  z-index: -1;
+}
+.feature-content { max-width: 700px; z-index: 10; }
