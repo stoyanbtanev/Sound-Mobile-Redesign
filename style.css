@@ -64,6 +64,7 @@ p { font-size: clamp(1rem, 1.2vw, 1.15rem); color: var(--text-muted); }
 }
 
 @media (max-width: 1024px) {
+  body { overflow: auto; }
   .sidebar { display: none; }
   .app-container { flex-direction: column; height: auto; overflow: visible; }
   .main-view { height: auto; overflow: visible; width: 100%; }
