@@ -65,6 +65,15 @@ document.addEventListener('DOMContentLoaded', () => {
                 document.body.style.overflow = '';
             });
         });
+
+        const overlayClose = document.querySelector('.overlay-close');
+        if (overlayClose) {
+            overlayClose.addEventListener('click', () => {
+                menuTrigger.classList.remove('active');
+                navOverlay.classList.remove('active');
+                document.body.style.overflow = '';
+            });
+        }
     }
 
     // 4. Reveal Animations (Intersection Observer)
@@ -81,4 +90,20 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     document.querySelectorAll('.reveal').forEach(el => revealObserver.observe(el));
+
+    // 5. Cookie Consent Bar
+    const cookieBar = document.getElementById('cookie-bar');
+    if (cookieBar) {
+        if (!localStorage.getItem('sm-cookies')) {
+            cookieBar.style.display = 'block';
+        }
+        document.getElementById('cookie-accept')?.addEventListener('click', () => {
+            localStorage.setItem('sm-cookies', 'accepted');
+            cookieBar.style.display = 'none';
+        });
+        document.getElementById('cookie-decline')?.addEventListener('click', () => {
+            localStorage.setItem('sm-cookies', 'declined');
+            cookieBar.style.display = 'none';
+        });
+    }
 });
