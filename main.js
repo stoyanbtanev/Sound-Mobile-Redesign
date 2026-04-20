@@ -89,7 +89,13 @@ document.addEventListener('DOMContentLoaded', () => {
         threshold: 0.1
     });
 
-    document.querySelectorAll('.reveal').forEach(el => revealObserver.observe(el));
+    document.querySelectorAll('.reveal').forEach(el => {
+        if (el.closest('.hero-section')) {
+            el.classList.add('visible');
+        } else {
+            revealObserver.observe(el);
+        }
+    });
 
     // 5. Cookie Consent Bar
     const cookieBar = document.getElementById('cookie-bar');
